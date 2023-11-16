@@ -19,11 +19,11 @@ const fetchBreedDescription = function(breedName, callback) {
     //check if there is data (the breed exists).
     //If the breed doesn't exist call the callback with null
     if (data.length === 0) {
-      callback(null,null);
+      callback(error,null);
     } else {
       // if the breed exists fetch the description and call the callback with it
       const desc = data[0].description;
-      callback(null, desc);
+      callback(error, desc);
     }
   });
 };
